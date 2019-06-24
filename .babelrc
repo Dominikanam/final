@@ -1,0 +1,31 @@
+{
+	"presets": ["@babel/preset-env", "@babel/preset-react"],
+	"plugins": [
+		"@babel/plugin-proposal-class-properties",
+		"@babel/plugin-transform-runtime",
+		"@babel/plugin-transform-regenerator",
+		[
+			"react-intl",
+			{
+				"messagesDir": "./client/dist/messages/"
+			}
+		]
+	],
+	"env": {
+		"development": {
+			"plugins": [
+				"@babel/plugin-transform-react-jsx-source",
+				"@babel/plugin-transform-react-jsx-self"
+			]
+		},
+		"test": {},
+		"production": {
+			"plugins": [
+				"transform-react-remove-prop-types",
+				"transform-react-pure-class-to-function",
+				"@babel/plugin-transform-react-constant-elements",
+				"@babel/plugin-transform-react-inline-elements"
+			]
+		}
+	}
+}

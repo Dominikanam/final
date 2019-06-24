@@ -1,0 +1,20 @@
+{
+	"defaultSeverity": "warning",
+	"rules": {
+		"number-no-trailing-zeros": true,
+		"at-rule-semicolon-space-before": "never",
+		"max-empty-lines": 1,
+		"no-eol-whitespace": true,
+		"declaration-property-unit-whitelist": {
+			"font-size": ["px"],
+			"line-height": ["px"],
+			"/^margin/": ["px"],
+			"/^padding/": ["px"],
+		},
+		"color-named": "never",
+		"color-hex-length": "long",
+		"color-hex-case": "lower",
+		"color-no-invalid-hex": true,
+		"length-zero-no-unit": true
+	}
+}
