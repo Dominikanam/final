@@ -1,0 +1,22 @@
+[
+  {
+    "id": "app.siteMap.copyrights",
+    "defaultMessage": "All rights reserved"
+  },
+  {
+    "id": "app.siteMap.home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "app.siteMap.faq",
+    "defaultMessage": "FAQ"
+  },
+  {
+    "id": "app.siteMap.terms",
+    "defaultMessage": "Terms"
+  },
+  {
+    "id": "app.siteMap.contact",
+    "defaultMessage": "Contact"
+  }
+]

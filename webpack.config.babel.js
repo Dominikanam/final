@@ -68,7 +68,7 @@ module.exports = (env = 'production') => {
 				},
 				{ test: /\.ico$/, loader: 'file-loader?name=[name].ico&mimeType=image/x-icon' },
 				{ test: /\.xml$/, loader: 'file-loader?name=[name].xml&mimeType=application/xml' },
-				{ test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=[name].[ext]' },
+				{ test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=[path][name].[ext]' },
 				getStylesModule(env)
 			]
 		},

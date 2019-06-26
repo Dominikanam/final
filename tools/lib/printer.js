@@ -29,18 +29,15 @@ export default function printICUMessage(ast) {
 			case 'number':
 			case 'date':
 			case 'time':
-				const style = format.style ? `, ${format.style}` : '';
-				return message + `{${id}, ${formatType}${style}}`;
+				return message + `{${id}, ${formatType}${format.style ? `, ${format.style}` : ''}}`;
 
 			case 'plural':
 			case 'selectOrdinal':
 			case 'select':
-				const offset = format.offset ? `, offset:${format.offset}` : '';
-				const options = format.options.reduce((str, option) => {
+				return message + `{${id}, ${formatType}${format.offset ? `, offset:${format.offset}` : ''},${format.options.reduce((str, option) => {
 					const optionValue = printICUMessage(option.value);
 					return str + ` ${option.selector} {${optionValue}}`;
-				}, '');
-				return message + `{${id}, ${formatType}${offset},${options}}`;
+				}, '')}}`;
 		}
 	}, '');
 }

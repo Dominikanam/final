@@ -6,8 +6,8 @@ import { sync as globSync } from 'glob';
 import { sync as mkdirpSync } from 'mkdirp';
 import testTranslator from './testTranslator';
 
-const MESSAGES_PATTERN = './dist/messages/**/*.json';
-const LANG_DIR = './src/translations/';
+const MESSAGES_PATTERN = './client/dist/messages/**/*.json';
+const LANG_DIR = './client/src/translations/';
 
 // The locale code for Yoruba - deemed obscure enough that this is the language the 'fake' translator will be set to
 // clearly if we need to support this locale in the future this would need to be changed.
@@ -22,6 +22,7 @@ const defaultMessages = globSync(MESSAGES_PATTERN)
 	.map(file => JSON.parse(file))
 	.reduce((collection, descriptors) => {
 		descriptors.forEach(({ id, defaultMessage }) => {
+			// eslint-disable-next-line no-prototype-builtins
 			if (collection.hasOwnProperty(id)) {
 				throw new Error(`Duplicate message id: ${id}`);
 			}

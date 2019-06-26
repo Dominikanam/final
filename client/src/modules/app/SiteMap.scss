@@ -1,0 +1,16 @@
+.root {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #ff6400;
+      cursor: pointer;
+    }
+  }
+}

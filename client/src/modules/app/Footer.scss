@@ -1,0 +1,15 @@
+.root {
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+
+  p {
+    flex: 1 100%;
+  }
+
+  .siteMap {
+    flex: none;
+  }
+}

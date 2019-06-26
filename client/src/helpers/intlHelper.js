@@ -3,13 +3,15 @@ import flatMap from 'lodash/flatMap';
 /* locales */
 import en from 'react-intl/locale-data/en';
 import yo from 'react-intl/locale-data/yo';
+import pl from 'react-intl/locale-data/pl';
 /* messages */
 import enMessages from '../translations/en-US.json';
 import testMessages from '../translations/yo.json';
+import plMessages from '../translations/pl.json';
 
 export default class IntlHelper {
 	constructor() {
-		this.SupportedLocales = [[['en-US'], enMessages], [['yo', 'yo-NG'], testMessages]];
+		this.SupportedLocales = [[['en-US'], enMessages], [['yo', 'yo-NG'], testMessages], [['pl'], plMessages]];
 	}
 
 	getNavigatorLanguage() {
@@ -23,7 +25,7 @@ export default class IntlHelper {
 	}
 
 	getLocaleData() {
-		return [...en, ...yo];
+		return [...en, ...yo, ...pl];
 	}
 
 	// react-intl-helper throws error on empty string values

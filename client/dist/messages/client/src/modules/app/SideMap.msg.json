@@ -1,0 +1,22 @@
+[
+  {
+    "id": "app.footer.copyrights",
+    "defaultMessage": "All rights reserved"
+  },
+  {
+    "id": "app.footer.home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "app.footer.faq",
+    "defaultMessage": "FAQ"
+  },
+  {
+    "id": "app.footer.terms",
+    "defaultMessage": "Terms"
+  },
+  {
+    "id": "app.footer.contact",
+    "defaultMessage": "Contact"
+  }
+]

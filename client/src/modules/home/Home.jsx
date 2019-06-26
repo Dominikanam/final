@@ -1,20 +1,13 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
-import ProductItem from './ProductItem.jsx';
+import SideNav from './SideNav.jsx';
+import ProductsContainer from './ProductsContainer.jsx';
 import styles from './Home.scss';
 
-const Home = ({ products }) => (
+const Home = () => (
 	<section className={styles.root}>
-		<ul>
-			{products.map(product => (
-				<ProductItem key={product.id} product={product} />
-			))}
-		</ul>
+		<SideNav className={styles.sideNav} />
+		<ProductsContainer className={styles.products} />
 	</section>
 );
-
-Home.propTypes = {
-	products: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
-};
 
 export default memo(Home);

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "app.menu.home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "app.menu.faq",
+    "defaultMessage": "FAQ"
+  },
+  {
+    "id": "app.menu.terms",
+    "defaultMessage": "Terms"
+  },
+  {
+    "id": "app.menu.contact",
+    "defaultMessage": "Contact"
+  }
+]

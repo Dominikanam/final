@@ -1,3 +1,3 @@
-import HomeContainer from './HomeContainer.jsx';
+import Home from './Home.jsx';
 
-export default HomeContainer;
+export default Home;

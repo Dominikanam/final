@@ -1,19 +1,9 @@
 import { createReducer } from 'redux-act';
 import * as actions from '../actions/products';
+import data from '../data/products';
 
 const initialContactState = {
-	items: [
-		{
-			id: 1,
-			name: 'Product 1',
-			images: {
-				default: '/resources/images/products/1/default.jpg'
-			},
-			price: 2.5,
-			categories: ['watch', 'men'],
-			color: 'black'
-		}
-	]
+	items: data
 };
 
 export default createReducer(

@@ -1,14 +1,14 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 import styles from './App.scss';
 
 const App = ({ children }) => (
 	<section className={styles.root}>
-		<header>
-			<h1>Hello World!</h1>
-		</header>
+		<Header />
 		<main>{children}</main>
-		<footer></footer>
+		<Footer />
 	</section>
 );
 

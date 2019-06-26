@@ -1,3 +1,13 @@
 .root {
-	display: block;
+  display: flex;
+
+  .sideNav {
+    flex: none;
+    width: 300px;
+  }
+
+  .products {
+    flex: 1 100%;
+    padding: 10px;
+  }
 }

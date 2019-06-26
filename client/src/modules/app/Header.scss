@@ -1,0 +1,22 @@
+.root {
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  .title {
+    margin: 0;
+    padding: 0;
+    flex: 1 100%;
+
+    img {
+      height: 100px;
+      padding: 0 10px;
+    }
+  }
+
+  .menu {
+    flex: none;
+  }
+}

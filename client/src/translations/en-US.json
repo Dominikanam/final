@@ -1,1 +1,4 @@
-{}
+{
+  "app.app.header": "Hello World!",
+  "app.app.subheader": "This works!"
+}

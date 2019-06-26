@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import { parse } from 'intl-messageformat-parser';
 import print from './printer';
 
@@ -6,7 +7,7 @@ export default class Translator {
 		this.translateText = translateText;
 	}
 
-	translate(message, cb) {
+	translate(message) {
 		const ast = parse(message);
 
 		const translated = this.transform(ast);

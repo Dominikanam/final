@@ -1,0 +1,23 @@
+.root {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #ff6400;
+      cursor: pointer;
+    }
+
+    .basket {
+      font-size: 30px;
+      line-height: 32px;
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "home.pagination.prev",
+    "defaultMessage": "Previous"
+  },
+  {
+    "id": "home.pagination.next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "home.pagination.first",
+    "defaultMessage": "First"
+  },
+  {
+    "id": "home.pagination.last",
+    "defaultMessage": "Last"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "home.SideNav.sortHeader",
+    "defaultMessage": "Sort:"
+  },
+  {
+    "id": "home.sideNav.filterHeader",
+    "defaultMessage": "Filter:"
+  }
+]

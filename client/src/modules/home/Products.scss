@@ -1,0 +1,17 @@
+.root {
+  ul {
+    padding: 0;
+    margin: -10px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
