@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'class-names';
+import { Link } from 'react-router-dom';
 import { FaShoppingBasket } from 'react-icons/fa';
 import Msg from './Menu.msg';
 import styles from './Menu.scss';
@@ -9,7 +10,9 @@ const Menu = props => (
 	<nav className={classNames(styles.root, props.className)}>
 		<ul>
 			<li>
-				<Msg s="home" />
+				<Link to="/">
+					<Msg s="home" />
+				</Link>
 			</li>
 			<li>
 				<Msg s="faq" />
@@ -21,7 +24,9 @@ const Menu = props => (
 				<Msg s="contact" />
 			</li>
 			<li>
-				<FaShoppingBasket className={styles.basket} />
+				<Link to="/basket">
+					<FaShoppingBasket className={styles.basket} />
+				</Link>
 			</li>
 		</ul>
 	</nav>

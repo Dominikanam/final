@@ -4,6 +4,14 @@ import classNames from 'class-names';
 import Msg from './Pagination.msg';
 import styles from './Pagination.scss';
 
+const getPages = pageCount => {
+	const result = [];
+	for (let i = 1; i <= pageCount; i++) {
+		result.push(i);
+	}
+	return result;
+};
+
 const Pagination = props => (
 	<nav className={classNames(styles.root, props.className)}>
 		<ul>
@@ -13,6 +21,11 @@ const Pagination = props => (
 			<li onClick={() => props.goToPage(props.page - 1)}>
 				<Msg s="prev" />
 			</li>
+			{getPages(props.pageCount).map(page => (
+				<li key={page} onClick={() => props.goToPage(page)}>
+					{page}
+				</li>
+			))}
 			<li onClick={() => props.goToPage(props.page + 1)}>
 				<Msg s="next" />
 			</li>

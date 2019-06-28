@@ -11,13 +11,17 @@ const SideNav = props => (
 				<Msg s="sortHeader" />
 			</h2>
 			<ul>
-				<li>abc</li>
+				<li>Highest Price</li>
+				<li>Lowest Price</li>
 			</ul>
 			<h2 className={styles.header}>
 				<Msg s="filterHeader" />
 			</h2>
 			<ul>
-				<li>def</li>
+				<li>Recipent</li>
+				<li>Case Color</li>
+				<li>Strap Type</li>
+				<li>Movement</li>
 			</ul>
 		</div>
 	</nav>

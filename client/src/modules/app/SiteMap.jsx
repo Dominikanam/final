@@ -1,13 +1,16 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'class-names';
+import { Link } from 'react-router-dom';
 import Msg from './SiteMap.msg';
 import styles from './SiteMap.scss';
 
 const SiteMap = props => (
 	<ul className={classNames(styles.root, props.className)}>
 		<li>
-			<Msg s="home" />
+			<Link to="/">
+				<Msg s="home" />
+			</Link>
 		</li>
 		<li>
 			<Msg s="faq" />
