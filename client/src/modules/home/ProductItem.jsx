@@ -5,7 +5,7 @@ import { getImagesPaths } from '../../helpers/imageHelper';
 import { FaCartPlus } from 'react-icons/fa';
 import styles from './ProductItem.scss';
 
-const ProductItem = ({ product }) => (
+const ProductItem = ({ product, addProduct }) => (
 	<li className={styles.root}>
 		<Link to={`/product/${product.id}`}>
 			<div className={styles.product}>
@@ -18,7 +18,7 @@ const ProductItem = ({ product }) => (
 						)}
 						<span className={styles.current}>£{product.price}</span>
 					</div>
-					<button>
+					<button onClick={() => addProduct(product.id)}>
 						<FaCartPlus />
 					</button>
 				</div>
@@ -28,6 +28,7 @@ const ProductItem = ({ product }) => (
 );
 
 ProductItem.propTypes = {
+	addProduct: PropTypes.func.isRequired,
 	product: PropTypes.object.isRequired
 };
 

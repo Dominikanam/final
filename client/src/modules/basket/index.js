@@ -1,3 +1,3 @@
-import Basket from './Basket.jsx';
+import BasketContainer from './BasketContainer.jsx';
 
-export default Basket;
+export default BasketContainer;
