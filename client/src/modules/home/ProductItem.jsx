@@ -2,10 +2,9 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getImagesPaths } from '../../helpers/imageHelper';
-import { FaCartPlus } from 'react-icons/fa';
 import styles from './ProductItem.scss';
 
-const ProductItem = ({ product, addProduct }) => (
+const ProductItem = ({ product, addBasketProduct }) => (
 	<li className={styles.root}>
 		<Link to={`/product/${product.id}`}>
 			<div className={styles.product}>
@@ -18,8 +17,11 @@ const ProductItem = ({ product, addProduct }) => (
 						)}
 						<span className={styles.current}>£{product.price}</span>
 					</div>
-					<button onClick={() => addProduct(product.id)}>
-						<FaCartPlus />
+					<button
+						onClick={event => (
+							event.preventDefault(), addBasketProduct({ productId: product.id })
+						)}>
+						Add to basket
 					</button>
 				</div>
 			</div>
@@ -28,7 +30,7 @@ const ProductItem = ({ product, addProduct }) => (
 );
 
 ProductItem.propTypes = {
-	addProduct: PropTypes.func.isRequired,
+	addBasketProduct: PropTypes.func.isRequired,
 	product: PropTypes.object.isRequired
 };
 

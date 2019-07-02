@@ -1,9 +1,22 @@
 .root {
-  .gallery {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  &::before,
+  &:after {
+    content: "";
+    clear: both;
     display: block;
   }
 
+  .gallery {
+    float: left;
+    width: 50%;
+  }
+
   .info {
-    display: block;
+    float: left;
+    width: 50%;
   }
 }

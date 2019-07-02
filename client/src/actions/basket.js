@@ -1,6 +1,6 @@
 import { createSagaActions } from './utils';
 
-export const addProduct = createSagaActions('basket/ADD_PRODUCT');
+export const addBasketProduct = createSagaActions('basket/ADD_BASKET_PRODUCT');
 export const removeProduct = createSagaActions('basket/REMOVE_PRODUCT');
 export const applyVoucher = createSagaActions('basket/APPLY_VOUCHER');
 export const incrementProduct = createSagaActions('basket/INCREMENT_PRODUCT');

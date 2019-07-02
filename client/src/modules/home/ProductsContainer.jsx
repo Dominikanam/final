@@ -8,7 +8,7 @@ import Products from './Products.jsx';
 
 const actions = { ...ProductsActions };
 
-const productsPerPage = 6;
+const productsPerPage = 12;
 
 class ProductsContainer extends PureComponent {
 	static propTypes = {
