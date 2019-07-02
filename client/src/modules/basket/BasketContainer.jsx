@@ -13,6 +13,13 @@ class BasketContainer extends PureComponent {
 	}
 }
 
+const combineBasketInfo = (basketItems, products) => {
+	return basketItems.map(item => {
+		const product = products.find(p => p.id === item.id);
+		return { ...item, ...product };
+	});
+};
+
 export default connect(state => ({
-	items: state.basket.items
+	items: combineBasketInfo(state.basket.items, state.products.items)
 }))(BasketContainer);

@@ -2,7 +2,7 @@ import { createReducer } from 'redux-act';
 import * as actions from '../actions/basket';
 
 const initialBasketState = {
-	items: [],
+	items: [{ id: 1, quantity: 1 }],
 	discount: null
 };
 

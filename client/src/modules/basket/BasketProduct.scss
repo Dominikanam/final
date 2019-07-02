@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+
+  img {
+    width: 300px;
+  }
+  .description {
+    flex: 1 100%;
+  }
+}
