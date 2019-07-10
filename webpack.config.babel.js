@@ -1,6 +1,4 @@
 import path from 'path';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import getPlugins from './tools/webpack.plugins.js';
 import getStylesModule from './tools/webpack.styles.js';
 import getDevServerOptions from './tools/webpack.devserver.js';
@@ -23,16 +21,6 @@ module.exports = (env = 'production') => {
 			chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash].chunk.js'
 		},
 		optimization: {
-			minimizer: !isDev
-				? [
-						new UglifyJsPlugin({
-							cache: true,
-							parallel: true,
-							sourceMap: false // if set to true it generates a sourcemap usable by IE11
-						}),
-						new OptimizeCSSAssetsPlugin({})
-				  ]
-				: undefined,
 			splitChunks: {
 				cacheGroups: {
 					app: {
