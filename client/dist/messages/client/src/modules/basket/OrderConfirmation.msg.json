@@ -1,0 +1,10 @@
+[
+  {
+    "id": "basket.orderConfirmation.message",
+    "defaultMessage": "Please confirm your order"
+  },
+  {
+    "id": "basket.orderConfirmation.confirm",
+    "defaultMessage": "confirm"
+  }
+]

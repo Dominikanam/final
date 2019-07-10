@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import Msg from './BasketSummary.msg';
 import styles from './BasketSummary.scss';
 
 const BasketSummary = props => (
@@ -11,11 +12,17 @@ const BasketSummary = props => (
 				type="text"
 				value={props.voucher}
 			/>
-			<button onClick={props.applyVoucher}>apply</button>
+			<button onClick={props.applyVoucher}>
+				<Msg s="applyVoucher" />
+			</button>
 		</div>
-		<div className={styles.total}>{props.total}</div>
+		<div className={styles.summary}>
+			<div className={styles.subtotal}>{props.summary.subtotal}</div>
+			<div className={styles.discount}>{props.summary.discount}</div>
+			<div className={styles.total}>{props.summary.total}</div>
+		</div>
 		<button className={styles.pay} onClick={props.checkout}>
-			Checkout
+			<Msg s="checkout" />
 		</button>
 	</footer>
 );
@@ -24,12 +31,12 @@ BasketSummary.propTypes = {
 	applyVoucher: PropTypes.func.isRequired,
 	checkout: PropTypes.func.isRequired,
 	onVoucherChange: PropTypes.func.isRequired,
-	total: PropTypes.number.isRequired,
+	summary: PropTypes.object.isRequired,
 	voucher: PropTypes.string.isRequired
 };
 
 BasketSummary.defaultProps = {
-	total: 0,
+	summary: { subtotal: 0, total: 0, discount: 0 },
 	voucher: ''
 };
 

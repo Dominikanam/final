@@ -1,17 +1,21 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import BasketProduct from './BasketProduct.jsx';
-import BasketSummary from './BasketSummary.jsx';
+import BasketProductContainer from './BasketProductContainer.jsx';
+import BasketSummaryContainer from './BasketSummaryContainer.jsx';
+import Msg from './Basket.msg';
+import styles from './Basket.scss';
 
 const Basket = props => (
-	<div>
-		<h1>items</h1>
-		<ul>
+	<div className={styles.root}>
+		<h1 className={styles.name}>
+			<Msg s="header" />
+		</h1>
+		<ul className={styles.productDetails}>
 			{props.items.map(item => (
-				<BasketProduct item={item} key={item.id} />
+				<BasketProductContainer item={item} key={item.id} />
 			))}
 		</ul>
-		<BasketSummary />
+		<BasketSummaryContainer items={props.items} />
 	</div>
 );
 

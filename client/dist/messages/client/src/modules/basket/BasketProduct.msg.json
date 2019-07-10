@@ -1,0 +1,14 @@
+[
+  {
+    "id": "basket.basketProduct.remove",
+    "defaultMessage": "remove"
+  },
+  {
+    "id": "basket.basketProduct.increment",
+    "defaultMessage": "+"
+  },
+  {
+    "id": "basket.basketProduct.decrement",
+    "defaultMessage": "-"
+  }
+]

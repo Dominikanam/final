@@ -8,7 +8,6 @@ const initialBasketState = {
 
 export default createReducer(
 	{
-		[actions.addBasketProduct]: state => state,
 		[actions.addBasketProduct.done]: (state, { productId }) => {
 			const items = [...state.items];
 			const index = items.findIndex(item => item.id === productId);
@@ -23,7 +22,45 @@ export default createReducer(
 
 			return { ...state, items };
 		},
-		[actions.addBasketProduct.fail]: state => state
+		[actions.removeProduct.done]: (state, { productId }) => ({
+			...state,
+			items: state.items.filter(item => item.id !== productId)
+		}),
+		[actions.clearBasket.done]: state => ({
+			...state,
+			items: []
+		}),
+		[actions.applyVoucher.done]: (state, { discount }) => ({
+			...state,
+			discount
+		}),
+		[actions.incrementProduct.done]: (state, { productId }) => {
+			const items = [...state.items];
+			const index = items.findIndex(item => item.id === productId);
+
+			if (index >= 0) {
+				const basketItem = { ...items[index] };
+				basketItem.quantity++;
+				items[index] = basketItem;
+			}
+
+			return { ...state, items };
+		},
+		[actions.decrementProduct.done]: (state, { productId }) => {
+			const items = [...state.items];
+			const index = items.findIndex(item => item.id === productId);
+
+			if (index >= 0) {
+				if (items[index].quantity <= 1) {
+					return { ...state, items: items.filter(item => item.id !== productId) };
+				}
+				const basketItem = { ...items[index] };
+				basketItem.quantity--;
+				items[index] = basketItem;
+			}
+
+			return { ...state, items };
+		}
 	},
 	initialBasketState
 );

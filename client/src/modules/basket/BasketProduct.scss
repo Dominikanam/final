@@ -2,9 +2,58 @@
   display: flex;
 
   img {
-    width: 300px;
+    height: 150px;
+    flex: none;
+    margin-right: 50px;
   }
+
   .description {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 10px;
     flex: 1 100%;
+
+    .name {
+      display: block;
+      margin: 0 0 10px;
+    }
+
+    .remove {
+      border: none;
+      background-color: #ff0000;
+      color: #ffffff;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+      min-width: 20px;
+    }
+  }
+
+  .price {
+    flex: none;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 36px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .quantity {
+    flex: none;
+
+    button {
+      margin: 10px;
+      width: 30px;
+      height: 30px;
+      color: #ffffff;
+      background-color: #000000;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 }

@@ -4,9 +4,13 @@ import { defineMessages, FormattedMessage } from 'react-intl';
 import { noWrap } from '../../helpers/intlHelper';
 
 const messages = defineMessages({
-	header: {
-		id: 'basket.basket.header',
-		defaultMessage: 'Your basket products:'
+	message: {
+		id: 'basket.orderConfirmation.message',
+		defaultMessage: 'Please confirm your order'
+	},
+	confirm: {
+		id: 'basket.orderConfirmation.confirm',
+		defaultMessage: 'confirm'
 	}
 });
 

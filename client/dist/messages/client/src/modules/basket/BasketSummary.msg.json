@@ -1,0 +1,10 @@
+[
+  {
+    "id": "basket.basketSummary.applyVoucher",
+    "defaultMessage": "apply"
+  },
+  {
+    "id": "basket.basketSummary.checkout",
+    "defaultMessage": "checkout"
+  }
+]

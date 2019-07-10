@@ -4,9 +4,17 @@ import { defineMessages, FormattedMessage } from 'react-intl';
 import { noWrap } from '../../helpers/intlHelper';
 
 const messages = defineMessages({
-	header: {
-		id: 'basket.basket.header',
-		defaultMessage: 'Your basket products:'
+	remove: {
+		id: 'basket.basketProduct.remove',
+		defaultMessage: 'remove'
+	},
+	increment: {
+		id: 'basket.basketProduct.increment',
+		defaultMessage: '+'
+	},
+	decrement: {
+		id: 'basket.basketProduct.decrement',
+		defaultMessage: '-'
 	}
 });
 
