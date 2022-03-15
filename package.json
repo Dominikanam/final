@@ -96,7 +96,7 @@
 		"class-names": "^1.0.0",
 		"connected-react-router": "^6.4.0",
 		"intl": "^1.2.5",
-		"lodash-es": "^4.17.11",
+		"lodash-es": "^4.17.21",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
